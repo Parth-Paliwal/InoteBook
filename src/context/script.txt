@@ -1,0 +1,20 @@
+headers :
+ { "Content-Type": "application/json",
+  "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmYjI5NWNjZWFmMmEwNDI0NWY2NjYxIn0sImlhdCI6MTY5NDE4MTcyNH0.1sGazIlUBhVhF6GP4AQYME9RI2ukTsBVCJQr0AJkl18" }, }) const json = await response.json(); console.log(json); setnote(json); } // adding notes const addnote = async (Title,discription,tag) => { const response = await fetch(`${host}/notes/addnotes`, { method: "POST", headers: { "Content-Type": "application/json", "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmYjI5NWNjZWFmMmEwNDI0NWY2NjYxIn0sImlhdCI6MTY5NDE4MTcyNH0.1sGazIlUBhVhF6GP4AQYME9RI2ukTsBVCJQr0AJkl18" },
+   body: JSON.stringify({ Title,discription,tag }), });
+
+  import React from 'react';
+
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  
+  function App(){
+    const notify = () => toast("Wow so easy!");
+
+    return (
+      <div>
+        <button onClick={notify}>Notify!</button>
+        `<ToastContainer />`
+      </div>
+    );
+  }
